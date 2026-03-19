@@ -31,8 +31,9 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
+        run: npm install
         working-directory: frontend
-        run: npm ci
+      
 
       - name: Build Angular app for GitHub Pages
         working-directory: frontend
