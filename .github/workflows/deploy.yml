@@ -32,11 +32,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: frontend
+        working-directory: ./frontend
       
 
       - name: Build Angular app for GitHub Pages
-        working-directory: frontend
+        working-directory: ./frontend
         run: |
           npx ng build --configuration production --base-href "/${{ github.event.repository.name }}/"
         env:
